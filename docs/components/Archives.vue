@@ -1,12 +1,5 @@
 <script setup>
-import {
-  VPTeamPage,
-  VPTeamPageTitle,
-  VPTeamMembers,
-  VPTeamPageSection,
-  VPHomeFeatures,
-  VPButton
-} from 'vitepress/theme'
+
 import {data} from '../utils/generate.data';
 
 
