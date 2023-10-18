@@ -26,6 +26,11 @@ export default {
                 summary
             })
         })
+        //对data进行排序，按照id
+        data.sort((a, b) => {
+            return b.id - a.id
+        })
+
         return data
     }
 }

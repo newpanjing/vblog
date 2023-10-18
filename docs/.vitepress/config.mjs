@@ -4,15 +4,40 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
     title: "老潘的博客",
     description: "记录百味人生",
+    sitemap: {
+        hostname: 'https://panblogs.com',
+        transformItems: (items) => {
+            // add new items or modify/filter existing items
+            items.push({
+                url: '/extra-page',
+                changefreq: 'monthly',
+                priority: 0.8
+            })
+            return items
+        }
+    },
     themeConfig: {
+        editLink: {
+            pattern: 'https://github.com/newpanjing/vblog/edit/main/docs/:path',
+            text: "在Github上编辑"
+        },
+        lastUpdated: {
+            text: '更新时间',
+            formatOptions: {
+                dateStyle: 'short',
+                timeStyle: 'short'
+            }
+        },
+        externalLinkIcon:true,
         // https://vitepress.dev/reference/default-theme-config
         logo: '/logo.svg',
         logoLink: '/',
         //大纲递归
-        outline:'deep',
+        outline: 'deep',
         search: {
             provider: 'local'
         },
+        returnToTopLabel: "返回",
         nav: [
             {text: '首页', link: '/'},
             {text: '分类', link: '/cateogry'},
