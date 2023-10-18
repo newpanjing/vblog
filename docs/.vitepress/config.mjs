@@ -16,7 +16,6 @@ export default defineConfig({
             return items
         }
     },
-    cleanUrls:true,
     themeConfig: {
         editLink: {
             pattern: 'https://github.com/newpanjing/vblog/edit/main/docs/:path',
@@ -29,7 +28,7 @@ export default defineConfig({
                 timeStyle: 'short'
             }
         },
-        externalLinkIcon:true,
+        externalLinkIcon: true,
         // https://vitepress.dev/reference/default-theme-config
         logo: '/logo.svg',
         logoLink: '/',
