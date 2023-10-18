@@ -6,7 +6,7 @@ const props = defineProps(["title", "summary", "id"])
   <div class="wrap">
     <div class="box">
       <h2 class="title">
-        <a :href="`/archives/${id}.html`" v-text="title"></a>
+        <a :href="`/archives/${id}`" v-text="title"></a>
       </h2>
       <div class="summary" v-text="summary"></div>
     </div>

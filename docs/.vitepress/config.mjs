@@ -16,6 +16,7 @@ export default defineConfig({
             return items
         }
     },
+    cleanUrls:true,
     themeConfig: {
         editLink: {
             pattern: 'https://github.com/newpanjing/vblog/edit/main/docs/:path',

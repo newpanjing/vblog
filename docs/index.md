@@ -1,5 +1,6 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
+titleTemplate: 记录生活、记录工作
 layout: home
 
 hero:

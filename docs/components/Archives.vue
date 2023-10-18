@@ -21,17 +21,23 @@ for (let i = 0; i < max; i++) {
 <template>
 
   <div class="container">
-    <h2>最新博文
-      <Badge type="tip" :text="latest.length"/>
-    </h2>
+    <div class="head">
+      <h2>最新博文
+        <Badge type="tip" :text="latest.length"/>
+      </h2>
+
+      <a href="">👉🏻阅读更多</a>
+    </div>
     <div class="items">
       <Article v-for="item in latest" :key="item.id" :title="item.title" :summary="item.summary"
                :id="item.id"></Article>
     </div>
 
-    <a href="#">
-      阅读更多
-    </a>
+    <div class="center">
+      <a href="#">
+        阅读更多
+      </a>
+    </div>
   </div>
 </template>
 
@@ -47,5 +53,13 @@ for (let i = 0; i < max; i++) {
 .items {
   display: flex;
   flex-wrap: wrap;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+}
+.center{
+  padding-top: 20px;
+  text-align: center;
 }
 </style>
