@@ -6,7 +6,10 @@ layout: home
 hero:
   name: "老潘的博客"
   text: "记录生活、记录工作"
-  tagline: 博客采用Vuepress魔改
+  tagline: 博客采用VitePress魔改
+  image:
+    src: /boanner-decorate.png
+    alt: Banner
   actions:
     - theme: brand
       text: 阅读更多

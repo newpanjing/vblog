@@ -40,7 +40,8 @@ export default defineConfig({
         returnToTopLabel: "返回",
         nav: [
             {text: '首页', link: '/'},
-            {text: '分类', link: '/cateogry'},
+            {text: '分类', link: '/page/1.html'},
+            {text: '关于我', link: '/about/'},
             {text: '社区', link: 'https://www.mldoo.com'},
             {
                 text: '产品', items: [
@@ -63,6 +64,9 @@ export default defineConfig({
                     {text: '🏡 首页', link: '/'},
                     {text: '📚 分类', link: '/api-examples'}
                 ]
+            }, {
+                link: '/archives',
+                sidebar: false
             }
         ],
 

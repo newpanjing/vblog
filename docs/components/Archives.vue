@@ -26,7 +26,7 @@ for (let i = 0; i < max; i++) {
         <Badge type="tip" :text="latest.length"/>
       </h2>
 
-      <a href="">👉🏻阅读更多</a>
+      <a href="/page/1.html">👉🏻阅读更多</a>
     </div>
     <div class="items">
       <Article v-for="item in latest" :key="item.id" :title="item.title" :summary="item.summary"
@@ -34,7 +34,7 @@ for (let i = 0; i < max; i++) {
     </div>
 
     <div class="center">
-      <a href="#">
+      <a href="/page/1.html">
         阅读更多
       </a>
     </div>
