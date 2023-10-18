@@ -8,7 +8,9 @@
     "preview": "vitepress preview docs"
   },
   "dependencies": {
+    "less": "^4.2.0",
     "vitepress": "^1.0.0-rc.22",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-devui": "^1.5.15-hotfix.4"
   }
 }

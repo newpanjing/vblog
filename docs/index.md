@@ -4,22 +4,17 @@ layout: home
 
 hero:
   name: "老潘的博客"
-  text: "老潘的博客"
-  tagline: My great project tagline
+  text: "记录生活、记录工作"
+  tagline: 博客采用Vuepress魔改
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 阅读更多
       link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
+
+<script setup>
+import Archives from './components/Archives.vue';
+</script>
+<Archives></Archives>
+
 
