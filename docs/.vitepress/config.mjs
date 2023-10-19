@@ -1,26 +1,17 @@
 import {defineConfig} from 'vitepress'
 
-import { SitemapStream } from 'sitemap';
-import { createWriteStream } from 'fs'
-import { resolve } from 'path'
-const links=[]
+import {SitemapStream} from 'sitemap';
+import {createWriteStream} from 'fs'
+import {resolve} from 'path'
+
+const links = []
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "老潘的博客",
     description: "记录百味人生",
-    sitemap: {
-        hostname: 'https://panblogs.com',
-        transformItems: (items) => {
-            // add new items or modify/filter existing items
-            items.push({
-                url: '/extra-page',
-                changefreq: 'monthly',
-                priority: 0.8
-            })
-            return items
-        }
-    },
     themeConfig: {
+        prev:false,
+        next:false,
         editLink: {
             pattern: 'https://github.com/newpanjing/vblog/edit/main/docs/:path',
             text: "在Github上编辑"
@@ -79,21 +70,21 @@ export default defineConfig({
         ]
         ,
         footer: {
-            message: 'Released under the MIT License.',
+            message: 'Released under the MIT License.<div style="color:red">haha</div>',
             copyright: 'Copyright © 2019-present Pan Jing'
         },
     },
-    transformHtml: (_, id, { pageData }) => {
+    transformHtml: (_, id, {pageData}) => {
         if (!/[\\/]404\.html$/.test(id))
             links.push({
                 // you might need to change this if not using clean urls mode
-                url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+                url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2') + ".html",
                 lastmod: pageData.lastUpdated
             })
     },
-    buildEnd: ({ outDir }) => {
+    buildEnd: ({outDir}) => {
         // you need to change hostname to your domain
-        const sitemap = new SitemapStream({ hostname: 'https://example.com/foo' })
+        const sitemap = new SitemapStream({hostname: 'https://panblogs.com/'})
         const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
         sitemap.pipe(writeStream)
         links.forEach((link) => sitemap.write(link))

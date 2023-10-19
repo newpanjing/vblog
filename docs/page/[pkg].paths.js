@@ -1,3 +1,7 @@
+/**
+ * 读取所有的文章，生产分页，这里只用到了一个总页数
+ * 根据这个总页数来生成对应的静态页面，而页面上的数据则是通过Pages.vue组件来生成
+ */
 import fs from 'fs'
 import path from 'path'
 
@@ -21,12 +25,5 @@ export default {
         }
 
         return pages;
-
-        //
-        // return [
-        //     {params: {pkg: 'foo', files: files}},
-        //     {params: {pkg: 'bar'}},
-        //     {params: {pkg: '1', files: files}}
-        // ]
     }
 }

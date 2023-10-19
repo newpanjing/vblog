@@ -35,7 +35,7 @@ for (let i = 0; i < max; i++) {
 
     <div class="center">
       <a href="/page/1.html">
-        阅读更多
+        👀 阅读更多
       </a>
     </div>
   </div>

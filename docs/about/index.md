@@ -28,4 +28,6 @@ I’m PanJing. 👋
 
 ![https://github-readme-stats.vercel.app/api?username=newpanjing&show_icons=true&hide_border=true&title_color=02d7f2&icon_color=02d7f2&text_color=ffffff&bg_color=00000000](https://github-readme-stats.vercel.app/api?username=newpanjing&show_icons=true&hide_border=true&title_color=02d7f2&icon_color=02d7f2&text_color=ffffff&bg_color=00000000)
 
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=newpanjing&hide=less,scss,css,html)
+
 </div>
