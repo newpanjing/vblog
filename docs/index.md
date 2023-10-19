@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 阅读更多
-      link: /markdown-examples
+      link: /page/1.html
 ---
 
 <script setup>
