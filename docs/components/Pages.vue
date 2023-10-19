@@ -10,6 +10,7 @@ import Article from "./Article.vue";
 const pageData = [];
 
 let page = props.params.pkg;
+let total=props.params.total;
 
 //根据当前的页数来截取data数组
 let pageSize = 10;
@@ -49,9 +50,12 @@ const next = computed(() => {
     </div>
   </div>
   <div class="container">
-    <a :href="prev">上一页</a>
-    <span>当前页：{{ page }}</span>
-    <a :href="next">下一页</a>
+    <div class="links">
+      <span>第{{ page }}/{{total}}页</span>
+      <a :href="prev">上一页</a>
+      <a :href="`/page/${i}.html`" :class="{active:i==page}" v-for="i in total" v-text="i"></a>
+      <a :href="next">下一页</a>
+    </div>
   </div>
 </template>
 
@@ -77,5 +81,14 @@ const next = computed(() => {
 .center {
   padding-top: 20px;
   text-align: center;
+}
+.links{
+  display: flex;
+  justify-content: center;
+  //元素间距
+  gap: 10px;
+  .active{
+    color: var(--docsearch-logo-color);
+  }
 }
 </style>

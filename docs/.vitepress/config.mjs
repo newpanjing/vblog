@@ -3,7 +3,7 @@ import {defineConfig} from 'vitepress'
 import {SitemapStream} from 'sitemap';
 import {createWriteStream} from 'fs'
 import {resolve} from 'path'
-
+import OutsideChain from "./outside_chain.js"
 const links = []
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -53,16 +53,6 @@ export default defineConfig({
         ],
 
         sidebar: [
-            {
-                text: '快速导航',
-                items: [
-                    {text: '🏡 首页', link: '/'},
-                    {text: '📚 分类', link: '/api-examples'}
-                ]
-            }, {
-                link: '/archives',
-                sidebar: false
-            }
         ],
 
         socialLinks: [
@@ -70,8 +60,8 @@ export default defineConfig({
         ]
         ,
         footer: {
-            message: 'Released under the MIT License.<div style="color:red">haha</div>',
-            copyright: 'Copyright © 2019-present Pan Jing'
+            message: OutsideChain.generate(),
+            copyright: 'Copyright © 2013-present Pan Jing'
         },
     },
     transformHtml: (_, id, {pageData}) => {

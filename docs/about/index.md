@@ -5,7 +5,7 @@ prev: false
 next: false
 editLink: false
 outline: false
-
+aside: false
 ---
 
 # About me
