@@ -12,8 +12,8 @@ hero:
     alt: Banner
   actions:
     - theme: brand
-      text: 阅读更多
-      link: /page/1.html
+      text: 获取源码
+      link: https://github.com/newpanjing/vblog
 ---
 
 <script setup>

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "preview": "yarn build&&vitepress preview docs"
   },
   "dependencies": {
     "less": "^4.2.0",

@@ -1,5 +1,5 @@
 export default {
-    generate() {
+    load(){
         let links = [{
             text: '首页',
             link: '/'

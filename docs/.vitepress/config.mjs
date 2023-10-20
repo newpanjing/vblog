@@ -3,15 +3,16 @@ import {defineConfig} from 'vitepress'
 import {SitemapStream} from 'sitemap';
 import {createWriteStream} from 'fs'
 import {resolve} from 'path'
-import OutsideChain from "./outside_chain.js"
+import LinksData from "./links.data"
+
 const links = []
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "老潘的博客",
     description: "记录百味人生",
     themeConfig: {
-        prev:false,
-        next:false,
+        prev: false,
+        next: false,
         editLink: {
             pattern: 'https://github.com/newpanjing/vblog/edit/main/docs/:path',
             text: "在Github上编辑"
@@ -52,15 +53,14 @@ export default defineConfig({
             }
         ],
 
-        sidebar: [
-        ],
+        sidebar: [],
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/newpanjing'}
         ]
         ,
         footer: {
-            message: OutsideChain.generate(),
+            message: "",
             copyright: 'Copyright © 2013-present Pan Jing'
         },
     },
