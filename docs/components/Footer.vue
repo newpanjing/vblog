@@ -15,6 +15,9 @@ let links = [{
 }, {
   text: '谈笑风生间',
   link: 'https://anyview.fun'
+}, {
+  text: '干志雄的博客',
+  link: 'https://ganzhixiong.com'
 }]
 
 
