@@ -45,8 +45,7 @@ const next = computed(() => {
 <template>
   <div class="container">
     <div class="items">
-      <Article v-for="item in pageData" :key="item.id" :title="item.title" :summary="item.summary"
-               :id="item.id"></Article>
+      <Article v-for="item in pageData" :key="item.id" :data="item"></Article>
     </div>
   </div>
   <div class="container">

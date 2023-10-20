@@ -1,35 +1,51 @@
 <script setup>
-const props = defineProps(["title", "summary", "id"])
+import {computed} from "vue";
+
+const props = defineProps({
+  data: {
+    type: Object,
+    required: true
+  }
+})
+//创建一个格式化日期的方法
+const createTime=computed(()=>{
+  return new Date(props.data.ctime).toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' });
+})
+
+
 </script>
 
 <template>
   <div class="wrap">
     <div class="box">
       <h2 class="title">
-        <a :href="`/archives/${id}.html`" v-text="title"></a>
+        <a :href="`/archives/${data.id}.html`" v-text="data.title"></a>
       </h2>
-      <div class="summary" v-text="summary"></div>
+      <div class="summary" v-text="data.summary"></div>
+      <div class="time">发布时间：{{ createTime }} </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="less">
 
-@media screen and (max-width: 768px){
-  .wrap{
-    width: 100%!important;
+@media screen and (max-width: 768px) {
+  .wrap {
+    width: 100% !important;
   }
 }
 
-.dark{
-  .title{
+.dark {
+  .title {
     color: white;
   }
 }
-.wrap{
+
+.wrap {
   width: 50%;
   padding: 10px;
 }
+
 .box {
   display: flex;
   flex-direction: column;
@@ -65,7 +81,11 @@ const props = defineProps(["title", "summary", "id"])
     -webkit-box-orient: vertical; /* 将弹性盒子的主轴方向设置为垂直方向 */
     overflow: hidden; /* 隐藏容器中超出部分的内容 */
     text-overflow: ellipsis; /* 超出容器范围的文本显示省略号 */
+  }
 
+  .time{
+    font-size: 12px;
+    margin-top: 10px;
   }
 }
 </style>

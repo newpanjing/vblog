@@ -23,7 +23,13 @@ export default {
             // let id = f.match(/\d+/)[0]
             let id = f.split('/').pop().split('.')[0]
             //移除html标签和markdown只保留文本，截取100个字符
-            let summary = str.replace(/<[^>]*>?/gm, "").replace(/:|\\+|#|`|'|"|-|{|}|\\[|\\]|&nbsp;|&39;/g, "").substring(6, 106)
+            str = str.replace(/---[\s\S]*---/g, "")
+            //移除 1 级标题
+            str = str.replace(/# *(.+)\r\n/g, "")
+            str = str.replace(/<[^>]*>?/gm, "").replace(/:|\\+|#|`|'|"|-|{|}|\\[|\\]|&nbsp;|&39;/g, "")
+
+
+            let summary = str.substring(0, 100)
 
             data.push({
                 id: id,
@@ -43,19 +49,15 @@ export default {
 
 function extractTitle(txt) {
     //正则提取markdown的标题
-    let regex = /(#+)[ ]*(.+)\n/g;
+    let regex = /# *(.+)[\r{0,1}|\n]/;
 
     let first = ""
 
-// 使用正则表达式匹配标题
+    // 使用正则表达式匹配标题
     let match;
     while ((match = regex.exec(txt)) !== null) {
-        first = match[2]
+        first = match[1]
         break
     }
-
-    //m冒泡排序
-
-
     return first
 }

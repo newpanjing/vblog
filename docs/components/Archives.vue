@@ -29,8 +29,7 @@ for (let i = 0; i < max; i++) {
       <a href="/page/1.html">👉🏻阅读更多</a>
     </div>
     <div class="items">
-      <Article v-for="item in latest" :key="item.id" :title="item.title" :summary="item.summary"
-               :id="item.id"></Article>
+      <Article v-for="item in latest" :key="item.id" :data="item"></Article>
     </div>
 
     <div class="center">
