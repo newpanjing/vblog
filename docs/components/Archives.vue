@@ -23,7 +23,7 @@ for (let i = 0; i < max; i++) {
   <div class="container">
     <div class="head">
       <h2>最新博文
-        <Badge type="tip" :text="latest.length"/>
+        <Badge type="tip" :text="latest.length+''"/>
       </h2>
 
       <a href="/page/1.html">👉🏻阅读更多</a>

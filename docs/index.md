@@ -4,8 +4,8 @@ titleTemplate: 记录生活、记录工作
 layout: home
 
 hero:
-  name: "老潘的博客"
-  text: "记录生活、记录工作"
+  name: "PanBlogs"
+  text: "思考无边界，博客共成长"
   tagline: 博客采用VitePress魔改
   image:
     src: /boanner-decorate.png

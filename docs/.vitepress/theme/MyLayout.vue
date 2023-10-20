@@ -3,6 +3,7 @@ import DefaultTheme from 'vitepress/theme'
 import NotFound from "../../components/NotFound.vue";
 import Reward from "../../components/Reward.vue";
 import Footer from "../../components/Footer.vue";
+import AdScene from "../../components/AdScene.vue";
 
 const {Layout} = DefaultTheme
 </script>
@@ -11,7 +12,7 @@ const {Layout} = DefaultTheme
   <Layout>
     <template #aside-outline-after>
       <!--   插入广告   -->
-      111
+      <AdScene/>
     </template>
 
     <template #layout-bottom>

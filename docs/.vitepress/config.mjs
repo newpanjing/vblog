@@ -3,13 +3,18 @@ import {defineConfig} from 'vitepress'
 import {SitemapStream} from 'sitemap';
 import {createWriteStream} from 'fs'
 import {resolve} from 'path'
-import LinksData from "./links.data"
 
 const links = []
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "老潘的博客",
+    title: "PanBlogs",
     description: "记录百味人生",
+    head: [
+        //百度统计
+        ['script', {src: 'https://hm.baidu.com/hm.js?522d264912db1f7c5649a7b11cd74b65'}],
+        //网页图标
+        ['link', {rel: 'icon', href: '/favicon.ico'}],
+    ],
     themeConfig: {
         prev: false,
         next: false,
@@ -26,7 +31,7 @@ export default defineConfig({
         },
         externalLinkIcon: true,
         // https://vitepress.dev/reference/default-theme-config
-        logo: '/logo.svg',
+        logo: '/logo.png',
         logoLink: '/',
         //大纲递归
         outline: 'deep',
@@ -61,7 +66,7 @@ export default defineConfig({
         ,
         footer: {
             message: "",
-            copyright: 'Copyright © 2013-present Pan Jing'
+            copyright: ''
         },
     },
     transformHtml: (_, id, {pageData}) => {
