@@ -16,18 +16,20 @@ export default {
 
             let str = fs.readFileSync(f, 'utf-8')
             let title = extractTitle(str)
+            let ctime = stat.ctime
             //从f提取文件名
 
             //文件名是1.md，从文件名提取数字
             // let id = f.match(/\d+/)[0]
-            let id=f.split('/').pop().split('.')[0]
+            let id = f.split('/').pop().split('.')[0]
             //移除html标签和markdown只保留文本，截取100个字符
             let summary = str.replace(/<[^>]*>?/gm, "").replace(/:|\\+|#|`|'|"|-|{|}|\\[|\\]|&nbsp;|&39;/g, "").substring(6, 106)
 
             data.push({
                 id: id,
                 title,
-                summary
+                summary,
+                ctime
             })
         })
         //对data进行排序，按照id

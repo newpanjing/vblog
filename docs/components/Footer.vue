@@ -18,6 +18,9 @@ let links = [{
 }, {
   text: '干志雄的博客',
   link: 'https://ganzhixiong.com'
+}, {
+  text: 'French',
+  link: 'https://hoime.cn'
 }]
 
 
@@ -39,7 +42,7 @@ const {site} = useData()
 <template>
   <div class="footer">
     <div class="links" v-html="linksHtml"></div>
-    <div class="copyright">Copyright © 2013-present {{site.title}}</div>
+    <div class="copyright">Copyright © 2013-present {{ site.title }}</div>
   </div>
   <ReturnTop/>
 </template>
