@@ -9,6 +9,9 @@ export default {
         }, {
             text: '社区',
             link: 'https://www.mldoo.com'
+        }, {
+            text: '谈笑风生间',
+            link: 'https://anyview.fun'
         }]
         let linksHtml = links.map(item => {
             let target = ''
