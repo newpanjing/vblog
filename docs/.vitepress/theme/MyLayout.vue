@@ -4,6 +4,7 @@ import NotFound from "../../components/NotFound.vue";
 import Reward from "../../components/Reward.vue";
 import Footer from "../../components/Footer.vue";
 import AdScene from "../../components/AdScene.vue";
+import Comment from "../../components/Comment.vue";
 
 const {Layout} = DefaultTheme
 </script>
@@ -22,6 +23,7 @@ const {Layout} = DefaultTheme
     <template #doc-after>
       <!--   文章底部打赏按钮   -->
       <Reward/>
+      <Comment/>
     </template>
     <template #not-found>
       <NotFound/>

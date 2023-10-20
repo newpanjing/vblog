@@ -10,6 +10,10 @@ export default {
         let data = [];
 
         watchFiles.forEach((f) => {
+            //读取文件的创建时间
+            let stat = fs.statSync(f)
+            console.log(stat)
+
             let str = fs.readFileSync(f, 'utf-8')
             let title = extractTitle(str)
             //从f提取文件名
