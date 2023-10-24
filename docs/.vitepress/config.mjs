@@ -3,6 +3,7 @@ import {defineConfig} from 'vitepress'
 import {SitemapStream} from 'sitemap';
 import {createWriteStream} from 'fs'
 import {resolve} from 'path'
+import * as url from "url";
 
 const links = []
 // https://vitepress.dev/reference/site-config
@@ -70,12 +71,17 @@ export default defineConfig({
         },
     },
     transformHtml: (_, id, {pageData}) => {
-        if (!/[\\/]404\.html$/.test(id))
+        if (!/[\\/]404\.html$/.test(id)) {
+            let url = pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2');
+            if (url.lastIndexOf('/') !== url.length - 1) {
+                url += ".html"
+            }
             links.push({
                 // you might need to change this if not using clean urls mode
-                url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2') + ".html",
+                url: url,
                 lastmod: pageData.lastUpdated
             })
+        }
     },
     buildEnd: ({outDir}) => {
         // you need to change hostname to your domain
