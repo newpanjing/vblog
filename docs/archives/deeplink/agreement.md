@@ -1,6 +1,6 @@
 # User Agreement
 
-Thank you for using DeepLink. This agreement is a contract entered into between you and the administrator of this APP, and has the legal effect of a contract. Please read it carefully.
+Thank you for using Geek Shot. This agreement is a contract entered into between you and the administrator of this APP, and has the legal effect of a contract. Please read it carefully.
 
 I. Disclaimer
 
