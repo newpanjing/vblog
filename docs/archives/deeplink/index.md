@@ -1,6 +1,6 @@
-# Geek Shot
+# DeepLink
 
-感谢您使用 Geek Shot App，我们高度重视用户体验
+感谢您使用 DeepLink App，我们高度重视用户体验
 
 如果您在使用过程中遇到任何问题，欢迎与我们取得联系。
 
@@ -16,7 +16,7 @@ E-mail：newpanjing@icloud.com
 
 ## English
 
-Thank you for using the Geek Shot App, we value the user experience
+Thank you for using the DeepLink App, we value the user experience
 
 If you encounter any problems during use, please feel free to get in touch with us.
 
